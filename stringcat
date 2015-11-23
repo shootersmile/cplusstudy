@@ -1,0 +1,26 @@
+// Cstudy.cpp : 定义控制台应用程序的入口点。
+//
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "string.h"
+/*字符串的处理复习
+（1）固定字符串保存在指针里比较方便，指针本质上就是字符串数组；
+ (2) 查询字符串数组功能可以使用网站cplusplus.com上查询；
+ (3) 代码共享和管理通过Github.com来实现；
+ (4) 字符串数组的输出使用puts（）函数。
+*/
+int main()
+{
+	char *p = "hello string";
+	char *q = "Good!";
+	const int STR_LEN=100;
+	char smetric[STR_LEN];
+	memset(smetric, 0,STR_LEN);
+	strcat_s(smetric, p);
+	strcat_s(smetric," ");
+	strcat_s(smetric, q);
+	strncat_s(smetric,q,3);
+	puts(smetric);
+	return 0;
+}
